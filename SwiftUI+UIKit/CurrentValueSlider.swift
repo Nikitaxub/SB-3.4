@@ -16,7 +16,6 @@ struct CurrentValueSlider: UIViewRepresentable {
         
         slider.minimumValue = 0
         slider.maximumValue = 100
-        slider.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: Double(opacity) / 100)
         
         slider.addTarget(
             context.coordinator,
@@ -27,7 +26,6 @@ struct CurrentValueSlider: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = value
         uiView.thumbTintColor = UIColor(red: 1, green: 0, blue: 0, alpha: Double(opacity) / 100)
     }
     

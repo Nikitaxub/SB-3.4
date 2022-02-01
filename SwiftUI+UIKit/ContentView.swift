@@ -21,7 +21,7 @@ struct ContentView: View {
                 CurrentValueSlider(value: $currentValue, opacity: computeScore())
                 Text("100")
             }
-            Button("Проверь меня!", action: { isChecked = true })
+            Button("Проверь меня!", action: { isChecked.toggle() })
                 .alert("Your score", isPresented: $isChecked, actions: {}) {
                     Text("\(computeScore())")
                 }
